@@ -3,8 +3,6 @@
  */
 
 import * as React from 'react'
-
-import styles from './styles.css'
 import { buildUrl } from './utils';
 
 export type Props = { 
