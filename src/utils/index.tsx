@@ -1,12 +1,12 @@
-import { Props } from "..";
+import { ImageManipulation } from "../types";
 
-export const buildUrl = (props: Props): string => {
+export const buildUrl = (src: string, config: ImageManipulation): string => {
   const {
-    preview, src, resize, crop, scaleCrop, stretch,
+    preview, resize, crop, scaleCrop, stretch,
     setfill, format, quality, progressive, enhance,
     sharp, blur, colors, filter, grayscale, invert,
     autorotate, rotate, flip, mirror,
-  } = props;
+  } = config;
   let url = src;
   // TODO: detect if final / is missing
   if (typeof preview === 'string') {

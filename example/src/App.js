@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 
-import Image from 'uploadcare-react'
+import Image, { getImageUrl } from 'uploadcare-react'
 
 export default class App extends Component {
   render () {
     return (
       <div>
+        <p>{getImageUrl("https://ucarecdn.com/52da3bfc-7cd8-4861-8b05-126fef7a6994/", {
+          preview: "300x300"
+        })}</p>
         <Image 
           src='https://ucarecdn.com/52da3bfc-7cd8-4861-8b05-126fef7a6994/'
           preview="800x400"
